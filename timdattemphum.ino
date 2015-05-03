@@ -15,14 +15,14 @@ Rod Con ..... The Road to Contentment.............
 This is a just one Reliable approach to IOT Logging, put it on the SDCARD then
 PUSH The Data to the Remote Server Seperately allowing Local Analyssis and backup.
 
-Use Arduino UNO or Mini Pro --> 
+Use Arduino UNO or Mini Pro(Use 5V Version For better stability of Sensor Readings) 
 Ethernet Shield or SDCARD Breakout Board With 8GB SDCARD (Min=2Gb) --> SPI Pins 10-13 + 4
 DS18B20 (As many as the Topology Algorithm Allows) --> Data pin Attached to Arduino Pin 3
 DHT22 First Sensor --> Data Pin Attached to Arduino Pin 2
 DHT22 Second Sensor --> Data Pin Attached to Arduino Pin 5
 The Pattern is repeated per DHT22 Add additional pins, Data Pins 2,3,5 NEED 10K Pullups !!!
-The DS1307 RTC gives Time & Date via the I2C Bus, This Also has an additional DS18B20
-Location onboard and can be used to Join the Sensors to the Arduino, Timestamps on SDWrite.
+The DS1307 RTC gives Time & Date via the I2C Bus, This Also has additional DS18B20 pins
+onboard and can be used to Join the Sensors to the Arduino, Timestamps on SDcard Write.
 The Files are CSV Comma seperated, Datalog.CSV and Humidlog.CSV on the SDCARD, if the Files
 Exist they will be Appended if not they will be Created, A Valid Partition IS NEEDED on SD.
 Datalog.CSV   ----   DS18B20 Log
