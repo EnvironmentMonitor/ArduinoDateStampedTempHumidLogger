@@ -37,7 +37,7 @@ files from SD to process in one routine but this can be Unreliable due to Timing
 ________________________________________________________________________________________
 !*!*!*!*!*!*!* ALL Data is sent to the Serial Console with Time Stamps  *!*!*!*!*!*!*!*!
 ___________________________________________________________________________
-!*!*!*! Please note the 4 Libraries Required in the Includes.......!*!*!*!|
+!*!*!*! Please note the Libraries Required in the Includes.......!*!*!*!|
 ---------------------------------------------------------------------------
 */
 #include <Wire.h>
@@ -46,12 +46,10 @@ ___________________________________________________________________________
 #include <SD.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-
+#define DS18B20_PIN 2
 #define DHTPIN 5
 #define DHTPIN1 6
 #define DHTTYPE DHT22
-#define DS18B20_PIN 2
-
 const int chipSelect = 4;
 DHT dht(DHTPIN, DHTTYPE);
 DHT dht1(DHTPIN1, DHTTYPE);
